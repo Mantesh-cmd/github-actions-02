@@ -19,3 +19,20 @@ jobs:
             -  run: |
                 npm install
                 npm test
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout the repo
+              uses: actions/checkout@v4
+            - name: install node JS
+              uses: actions/setup-node@v4
+              with:
+                node-version: 18
+            - run: |
+                npm install
+                npm test
+            - name: Build Project
+              run: npm run build
+            - name: Deploy
+              run: "Deploying your App....."
+
