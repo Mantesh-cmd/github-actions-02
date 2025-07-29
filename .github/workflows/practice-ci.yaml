@@ -20,6 +20,7 @@ jobs:
                 npm install
                 npm test
     deploy:
+        needs: test
         runs-on: ubuntu-latest
         steps:
             - name: checkout the repo
