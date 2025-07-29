@@ -34,5 +34,5 @@ jobs:
             - name: Build Project
               run: npm run build
             - name: Deploy
-              run: "Deploying your App....."
+              run: echo "Deploying your App....."
 
